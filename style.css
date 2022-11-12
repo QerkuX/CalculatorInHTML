@@ -1,0 +1,94 @@
+*{
+    font-family: monospace;
+    margin: 0 auto;
+    overflow: hidden;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box; 
+}
+
+body, html{
+    height: 100%;
+}
+
+.container{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator{
+    display: flex;
+    height: 85vh;
+    width: 30vw;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: gray;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 25px;
+    flex-direction: column;
+}
+
+.screen{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    height: 10vh;
+    width: 100%;
+    padding-right: 15px;
+    outline: 10px solid #0d2b45;
+    background-color: #c1ec7c;
+    margin-bottom: 25px;
+    font-size: 3rem;
+}
+
+.buttons{
+    display: grid;
+    flex-grow: 1;
+    width: 100%;
+    grid-template-areas:
+    "mc mplus divide multiply"
+    "seven eight nine minus"
+    "four five six plus"
+    "one two three equal"
+    "zero zero dot equal";
+    grid-gap: 25px;
+}
+
+.buttons > div{
+    display: flex;
+    background-color: rgb(196, 196, 196);
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.buttons > div:active{
+    background-color: rgb(255, 255, 255);
+}
+
+.dark{
+    background-color: rgb(31, 31, 31) !important;
+    color: white;
+}
+
+.dark:active{
+    background-color: rgb(0, 0, 0) !important;
+}
+
+#mc{
+    background-color: rgb(230, 79, 79);
+    color: white;
+}
+
+#mc:active{
+    background-color: red;
+}
